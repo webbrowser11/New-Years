@@ -1,0 +1,65 @@
+/* i really was not feeling like making css so i just copied some from a website. i think it looks ChatGPT generated too but you do you. */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Apply global styles */
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text color */
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #e0e0e0; /* Slightly lighter color for headings */
+    font-weight: 700; /* Bold font for headings */
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Links */
+a {
+    color: #1e90ff; /* Light blue color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover for better accessibility */
+}
+
+/* Paragraphs */
+p {
+    margin: 1rem 0;
+}
+
+/* Buttons */
+button {
+    background-color: #1e90ff; /* Light blue button background */
+    color: #ffffff; /* White text */
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1c86ee; /* Slightly darker blue on hover */
+}
+
+/* Other Elements */
+input, textarea {
+    background-color: #222222; /* Slightly lighter than the background */
+    color: #ffffff;
+    border: 1px solid #444444;
+    padding: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #1e90ff; /* Highlight border on focus */
+}
