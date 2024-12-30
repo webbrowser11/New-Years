@@ -19,18 +19,18 @@
             overflow: hidden;
             background: black;
             color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <p id="timer"></p>
     <h1>Happy New Years!</h1>
-    <center><small>Left click to shoot firework. Right click to change style.</small></center>
+    <p id="timer"></p>
 
     <canvas id="fireworksCanvas"></canvas>
 
     <script>
-        // Countdown Timer
         var Year = new Date().getFullYear();
         var NextYear = Year + 1;
         var CountDownDate = new Date(`Jan 1, ${NextYear} 00:00:00`).getTime();
@@ -49,7 +49,6 @@
                 minutes + " minutes " + seconds + " seconds ";
         }, 1000);
 
-        // Fireworks Logic
         const canvas = document.getElementById('fireworksCanvas');
         const ctx = canvas.getContext('2d');
 
@@ -112,15 +111,19 @@
 
         animate();
 
-        canvas.addEventListener('click', (e) => {
+        function launchFirework() {
+            const x = Math.random() * canvas.width;
+            const y = Math.random() * canvas.height / 2;
             const color = fireworkStyles[currentStyleIndex];
-            fireworks.push(new Firework(e.clientX, e.clientY, color));
-        });
+            fireworks.push(new Firework(x, y, color));
+        }
 
-        canvas.addEventListener('contextmenu', (e) => {
-            e.preventDefault();
+        function changeStyle() {
             currentStyleIndex = (currentStyleIndex + 1) % fireworkStyles.length;
-        });
+        }
+
+        setInterval(launchFirework, 500);
+        setInterval(changeStyle, 2000);
     </script>
 </body>
 </html>
