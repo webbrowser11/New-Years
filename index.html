@@ -22,9 +22,21 @@
             font-family: Arial, sans-serif;
             text-align: center;
         }
+        .footer { 
+            position: fixed;     
+            text-align: center;    
+            bottom: 0px; 
+            width: 100%;
+        }
     </style>
 </head>
 <body>
+    <!-- Audio Element with loop -->
+    <audio autoplay loop>
+        <source src="audio/motivational-background.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <h1>Happy New Year's!</h1>
     <p id="timer"></p>
 
@@ -125,18 +137,7 @@
         setInterval(launchFirework, 500);
         setInterval(changeStyle, 2000);
     </script>
-</body>
-</html>
-<head>
- <style type ="text/css" >
-   .footer{ 
-       position: fixed;     
-       text-align: center;    
-       bottom: 0px; 
-       width: 100%;
-   }  
-</style>
-</head>
-<body>
+
     <div class="footer"><small>Copyright, 2024 Webbrowser11</small></div>
 </body>
+</html>
